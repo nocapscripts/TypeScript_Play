@@ -1,0 +1,26 @@
+{
+    "env": {
+      "node": true,
+      "es2023": true,
+      "browser": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2023,
+      "sourceType": "module"
+    },
+    "plugins": [
+    
+    ],
+    "rules": {
+      "no-unused-vars": "off", // Warning for unused variables
+      "no-console": "off", // Warning for console logs
+      "@typescript-eslint/no-explicit-any": "off", // Allow any type if you prefer
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+  }
+  
