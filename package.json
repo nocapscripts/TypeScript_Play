@@ -1,18 +1,30 @@
 {
-  "dependencies": {
-    "typescript": "5.7.2"
-  },
-  "description": "test",
   "name": "tsplayground",
   "version": "0.0.1",
-  "devDependencies": {
-    "react-scripts": "1.0.0"
-  },
+  "description": "A simple TypeScript project",
+  "license": "MIT",
   "scripts": {
-    "exec": "tsc index.ts && node index.js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "webpack --mode production",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "watch": "webpack --mode development --watch true",
+    "terser": "terser dist/**/*.js --output dist/min --compress --mangle"
+  },
+  "devDependencies": {
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.19.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "eslint-webpack-plugin": "^4.2.0",
+    "javascript-obfuscator": "^4.1.1",
+    "remove-files-webpack-plugin": "^1.5.0",
+    "webpack-obfuscator": "^3.5.1"
   }
 }

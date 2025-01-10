@@ -1,19 +1,48 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "strictBindCallApply": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "declaration": true,
-    "target": "ES2017",
-    "jsx": "react",
-    "module": "ESNext",
-    "moduleResolution": "node"
-  }
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*"]
+    },
+    "target": "ES2023",                             /* Set the JavaScript version for emitted JavaScript */
+    "module": "commonjs",                           /* Set the module code generation */
+    "moduleResolution": "node",                     /* Module resolution strategy */
+    "esModuleInterop": true,                        /* Enables ES module interop */
+    "forceConsistentCasingInFileNames": true,       /* Ensure case sensitivity in imports */
+    "strict": true,                                 /* Enable all strict type checking options */
+    "noImplicitAny": true,                          /* Raise error on expressions with 'any' type */
+    "strictNullChecks": true,                       /* Check for 'null' and 'undefined' */
+    "noUnusedLocals": true,                         /* Report unused variables */
+    "noUnusedParameters": true,                     /* Report unused function parameters */
+    "noImplicitReturns": true,                      /* Report functions that do not return a value */
+    "noFallthroughCasesInSwitch": true,             /* Report fallthrough cases in switch statements */
+    "allowJs": true,                                /* Allow JavaScript files to be part of your program */
+    "skipDefaultLibCheck": true,                    /* Skip type checking default .d.ts files */
+    
+    /* Source Map and Debugging */
+    "sourceMap": false,                              /* Generate source maps for easier debugging */
+    "inlineSourceMap": false,                       /* Do not inline source maps in the emitted JavaScript */
+    "declaration": false,                            /* Generate declaration files (.d.ts) */
+    "declarationMap": false,                         /* Generate declaration map files */
+    
+   
+    
+    /* Additional Settings */
+    "resolveJsonModule": true,                      /* Allows importing .json files */
+    "skipLibCheck": true,                           /* Skip checking of declaration files in node_modules */
+    "noEmitOnError": true,                          /* Don't emit output if there are type errors */
+    "types": ["node"],                              /* Include Node.js type declarations */
+    
+    /* Experimental Features */
+    "experimentalDecorators": true,                 /* Enable experimental support for decorators */
+    "emitDecoratorMetadata": true,                  /* Emit metadata for decorators */
+    
+    /* Enable JSX if used for React */
+    "jsx": "react",                                 /* Set JSX handling mode */
+    "jsxFactory": "React.createElement",            /* Define the JSX factory function */
+    "jsxFragmentFactory": "React.Fragment"          /* Define the JSX fragment function */
+  },
+  
+  "include": ["./**/*.ts"], 
+  "exclude": ["**/node_modules"]
 }
